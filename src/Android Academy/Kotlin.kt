@@ -1,6 +1,4 @@
-package `Android Academy`
-
-import sun.jvm.hotspot.oops.CellTypeState.value
+package`Android Academy`
 
 fun main() {
     var a: String? = null
