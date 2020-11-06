@@ -1,7 +1,6 @@
 package types
 
 import javax.naming.Context
-import javax.print.attribute.Attribute
 import javax.print.attribute.AttributeSet
 
 fun main() {
@@ -28,6 +27,9 @@ fun main() {
 
 
 
+    println(PrivateUser("test@Kotlinlang.org").nickname)
+    println(SubcribingUser("test@Kotlinlang.org").nickname)
+
 
 
 }
@@ -53,6 +55,16 @@ class MyButton: View {
 interface User {
     val nickname: String
 }
+
+class PrivateUser(override val nickname: String): User
+
+class SubcribingUser(private val email: String) : User {
+    override val nickname: String
+    get() = email.substringBefore('@')
+}
+
+
+
 
 // p 117
 
