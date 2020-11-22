@@ -116,6 +116,15 @@ fun main() {
 
     }
 
+    fun factorial(n: Int): Double = if(n < 2) 1.0 else n * factorial(n - 1)
+
+    // p 25
+
+    
+
+
+
+
 
 
 
